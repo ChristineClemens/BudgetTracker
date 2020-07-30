@@ -53,6 +53,8 @@ function checkDatabase() {
             return response.json();
         })
         .then(function() {
+            const transaction = db.transaction(["pending"], "readwrite");
+            const store = transaction.objectStore("pending");
             store.clear();
         });
       }
