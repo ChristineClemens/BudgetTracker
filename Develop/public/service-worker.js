@@ -17,10 +17,10 @@ async function serviceCode() {
 
 serviceCode();
 
-const CACHE_NAME = "static-cache-v2";
+const CACHE_NAME = "my-site-cache-v1";
 const DATA_CACHE_NAME = "data-cache-v1";
 
-var urlsToCache = [
+const filesToCache = [
     "/",
     "/db.js",
     "/index/js",
@@ -34,26 +34,11 @@ var urlsToCache = [
 self.addEventListener("install", function(event) {
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
-            console.log("Cache opened successfully!");
-            return cache.addAll(urlsToCache);
+            console.log("Cache opened successfully! Files are now being stored in the array.");
+            return cache.addAll(filesToCache);
         })
     )
 });
-
-// Activate Caching
-self.addEventListener("activate", function(event) {
-    event.waitUntil(
-      caches.keys().then(keyList => {
-        return Promise.all(
-          keyList.map(key => {
-            if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-              console.log("Removing old cache data", key);
-              return caches.delete(key);
-            }
-          })
-        );
-      })
-    );
 
 //Fetch request
 self.addEventListener("fetch", function(event) {
@@ -73,16 +58,19 @@ self.addEventListener("fetch", function(event) {
               return cache.match(event.request);
             });
         }).catch(err => console.log(err))
-      );
-      return;
+        )
+        return;
     }
 
     event.respondWith(
-      caches.open(CACHE_NAME).then(cache => {
-        return cache.match(event.request).then(response => {
-          return response || fetch(event.request);
-        });
-      })
-    );
-  });
+        fetch(event.request).catch(function() {
+            return cache.match(event.request).then(function (response) {
+                if (response) {
+                    return response;
+                } else if (event.request.headers.get("accept").includes("text/html")) {
+                    return caches.match("/");
+                }
+            })
+        })
+    )
 });
