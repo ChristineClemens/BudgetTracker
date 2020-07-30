@@ -13,7 +13,7 @@
 
   <title>Budget Tracker</title>
 </head>
-<body>
+<body></body>
   <div class="wrapper">
     <div class="total">
       <div class="total">Your total is: $<span id="total">0</span></div>
@@ -44,5 +44,19 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
+
+  <script>
+    async function initApp() {
+      console.log(`Initializing App.`);
+      if (!navigator.serviceWoker) {
+        console.log(`No Service Workers in place, quitting.`);
+        return
+      }
+      navigator.serviceWorker.register("service-worker.js");
+    }
+
+    window.addEventListener("load", initApp);
+  </script>
+  
 </body>
 </html>
