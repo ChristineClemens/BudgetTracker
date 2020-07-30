@@ -23,8 +23,8 @@ const DATA_CACHE_NAME = "data-cache-v1";
 const filesToCache = [
     "/",
     "/assets/db.js",
-    "/assets/index/js",
-    "/assets/manifest.json",
+    "/assets/index.js",
+    "/public/manifest.json",
     "/assets/styles.css",
     "/assets/icons/icon-192x192.png",
     "/assets/icons/icon-512x512.png"
