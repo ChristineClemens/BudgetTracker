@@ -22,12 +22,12 @@ const DATA_CACHE_NAME = "data-cache-v1";
 
 const filesToCache = [
     "/",
-    "/db.js",
-    "/index/js",
-    "/manifest.json",
-    "/styles.css",
-    "/icons/icon-192x192.png",
-    "/icons/icon-512x512.png"
+    "/assets/db.js",
+    "/assets/index/js",
+    "/assets/manifest.json",
+    "/assets/styles.css",
+    "/assets/icons/icon-192x192.png",
+    "/assets/icons/icon-512x512.png"
 ];
 
 //Caching capability initialization
