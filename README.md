@@ -13,9 +13,9 @@ This application has been developed to assist its users in managing their financ
 
 ### Installation
 - node.js (https://nodejs.org/en/)
-- compression (npm install axios)
-- express (npm install fs)
-- server-lite (npm install inquirer)
+- compression (npm install compression)
+- express (npm install express)
+- server-lite (npm install server-lite)
 - mongoose (npm install mongoose)
 - morgan (npm install morgan)
 
