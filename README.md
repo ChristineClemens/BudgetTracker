@@ -22,7 +22,7 @@ This application has been developed to assist its users in managing their financ
 ### Usage
 In order to use this application effectively, simply clone this repository to your local computer. Be sure to have the node.js server environment installed as well as the compression, express, server-lite, mongoose, and morgan modules that can be downloaded by entering “npm install < module >” in the command line. Following this setup, initialize the JavaScript file by entering “node server.js” in the command line. If successful, you will be greeted with "Server listening on http://localhost:3000"! Type this URL into the browser search bar to access the application.
 
-Alternatively, you can access the deployed application at:
+Alternatively, you can access the deployed application at: https://glacial-waters-81724.herokuapp.com/
 
 ### License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -57,4 +57,4 @@ There are currently no contributions to this project. If you would like to becom
 **This project was created by Christine Clemens.**     
 
 **GitHub Repository:** https://github.com/ChristineClemens/BudgetTracker                        
-**Deployed Application:** 
+**Deployed Application:** https://glacial-waters-81724.herokuapp.com/
