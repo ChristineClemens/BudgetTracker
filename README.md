@@ -56,5 +56,5 @@ There are currently no contributions to this project. If you would like to becom
 | <a href= "christineclemens.tesol@gmail.com" target="_blank">Contact Me</a> |
 **This project was created by Christine Clemens.**     
 
-**GitHub Repository:** https://github.com/ChristineClemens/BudgetTracker
+**GitHub Repository:** https://github.com/ChristineClemens/BudgetTracker                        
 **Deployed Application:** 
