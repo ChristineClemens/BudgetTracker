@@ -2,7 +2,7 @@
 ### Description
 This application has been developed to assist its users in managing their financial expenditures, allowing them to add funds and subtract funds efficiently regardless of whether or not an internet connection is employed at the time of these transactions.
 
-![alt text](../public/assets/icons/BudgetTracker.PNG)
+![alt text](https://github.com/ChristineClemens/BudgetTracker/blob/master/Develop/public/assets/icons/BudgetTracker.PNG?raw=true)
 
 ### Table of Contents
 - [Installation](#Installation) 
