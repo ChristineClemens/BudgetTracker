@@ -31,5 +31,5 @@ app.listen(PORT, () => {
 });
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/Develop/public/index.html');
+  res.sendFile(__dirname + '/');
 });
